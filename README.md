@@ -1,5 +1,9 @@
 # Time-Series
 This repository contains various mini-projects related to Time Series Analysis and Forecasting. Each project explores different techniques and models used in time series data analysis, including preprocessing, visualization, trend analysis, and forecasting.
+
+
+
+
 #""Mini Project 1: Air Passengers Time Series Analysis""#
 In this project, we analyze the Air Passengers dataset, which contains monthly statistics of international airline passengers from 1949 to 1960. The goal is to explore the trends, seasonality, and patterns in air travel over time using time series analysis techniques.
 
