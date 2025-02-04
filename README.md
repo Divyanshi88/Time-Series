@@ -22,7 +22,7 @@ By visualizing the number of passengers over time, we can identify seasonal tren
 This project lays the groundwork for more advanced time series forecasting and anomaly detection in future mini-projects.
 Outcome:
 This project serves as a foundational example of time series analysis, demonstrating data preprocessing and visualization techniques that can be applied to various time series datasets.
-
+---
 ### **Mini Project 2: Stationarity Analysis of Time Series Data**  
 
 In this project, we analyze the stationarity of two time series datasets: **Shampoo Sales Over Time** and **Monthly Beer Production in Australia**. The goal is to determine whether these time series exhibit stationarity and, if not, apply transformations to make them stationary, which is essential for accurate forecasting.
