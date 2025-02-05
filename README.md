@@ -53,3 +53,32 @@ In this project, we analyze the stationarity of two time series datasets: **Sham
 
 ### **Outcome:**  
 This project demonstrates **stationarity analysis**, an essential step in time series forecasting. By identifying and transforming non-stationary data into a stationary format, we prepare it for **ARIMA and other predictive modeling techniques** in future mini-projects.
+## **Mini Project: Wikipedia Page View Time Series Analysis**  
+
+In this project, we analyze **Wikipedia page view traffic** using time series techniques to explore trends, seasonality, and stationarity. The goal is to understand the underlying patterns in the data and prepare it for future forecasting.  
+
+### **Key Steps:**  
+
+#### **1. Data Preprocessing:**  
+- Loaded the **Wikipedia page views dataset** into a Pandas DataFrame.  
+- Checked for **missing values** and handled them using **forward fill (ffill)** to ensure continuity.  
+- Converted the date columns into **DateTime format** and set the index for time series analysis.  
+
+#### **2. Visualization:**  
+- Plotted the **raw time series** to observe the overall trends in Wikipedia traffic.  
+- Applied **rolling statistics (mean & standard deviation)** to analyze changes over time.  
+- Used **Autocorrelation Function (ACF) plots** to understand dependencies in the time series.  
+
+#### **3. Stationarity Testing & Trend Analysis:**  
+- Conducted an **Augmented Dickey-Fuller (ADF) Test** to check stationarity.  
+- Observed **non-stationary behavior** in the data, indicating trends and seasonality.  
+- Used **seasonal decomposition** (additive model) to break the series into **trend, seasonality, and residuals** for better interpretation.  
+
+#### **4. Key Insights:**  
+- The **Wikipedia page views dataset** showed **strong seasonality and trends**, leading to non-stationarity.  
+- Rolling mean analysis indicated **long-term variations in page views**.  
+- After decomposing the series, **weekly seasonality** was observed, suggesting periodic fluctuations in traffic.  
+- These insights help in **future forecasting** by preparing the data for further modeling using ARIMA or other predictive techniques.  
+
+---
+
