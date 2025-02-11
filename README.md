@@ -1,84 +1,124 @@
-# Time-Series
-This repository contains various mini-projects related to Time Series Analysis and Forecasting. Each project explores different techniques and models used in time series data analysis, including preprocessing, visualization, trend analysis, and forecasting.
 
+# Time-Series Projects
 
+This repository contains various mini-projects related to **Time Series Analysis and Forecasting**. Each project explores different techniques and models used in time series data analysis, including preprocessing, visualization, trend analysis, and forecasting.
 
+---
 
 ### **Mini Project 1: Air Passengers Time Series Analysis**
-In this project, we analyze the Air Passengers dataset, which contains monthly statistics of international airline passengers from 1949 to 1960. The goal is to explore the trends, seasonality, and patterns in air travel over time using time series analysis techniques.
----
-### **Key Steps:**
-#### **Data Preprocessing:**
 
-Convert the Month column to a datetime object and set it as the index.
-Sort the data chronologically to prepare for time series analysis.
-Visualization:
+In this project, we analyze the **Air Passengers** dataset, which contains monthly statistics of international airline passengers from 1949 to 1960. The goal is to explore the trends, seasonality, and patterns in air travel over time using time series analysis techniques.
 
-We create Matplotlib line charts for static visualizations.
-Interactive time series charts are built using Plotly, allowing us to explore the data more interactively.
-Key Insights:
+#### **Key Steps:**
 
-By visualizing the number of passengers over time, we can identify seasonal trends and significant growth over the years.
-This project lays the groundwork for more advanced time series forecasting and anomaly detection in future mini-projects.
-Outcome:
-This project serves as a foundational example of time series analysis, demonstrating data preprocessing and visualization techniques that can be applied to various time series datasets.
----
-### **Mini Project 2: Stationarity Analysis of Time Series Data**  
+- **Data Preprocessing:**  
+  - Convert the **Month** column to a datetime object and set it as the index.  
+  - Sort the data chronologically for time series analysis.
 
-In this project, we analyze the stationarity of two time series datasets: **Shampoo Sales Over Time** and **Monthly Beer Production in Australia**. The goal is to determine whether these time series exhibit stationarity and, if not, apply transformations to make them stationary, which is essential for accurate forecasting.
+- **Visualization:**  
+  - Created **Matplotlib line charts** for static visualizations.  
+  - Built **interactive time series charts** using Plotly for more engaging exploration.
+
+- **Key Insights:**  
+  - Identified seasonal trends and significant growth in the number of passengers over time.  
+  - Laid the foundation for advanced forecasting and anomaly detection.
+
+- **Outcome:**  
+  This project demonstrates fundamental time series analysis techniques such as data preprocessing and visualization.
 
 ---
 
-### **Key Steps:**  
+### **Mini Project 2: Stationarity Analysis of Time Series Data**
 
-#### **1. Data Preprocessing:**  
-- Downloaded **time series datasets** from Kaggle using the Kaggle API.  
-- Loaded the datasets into Pandas DataFrames for analysis.  
-- Checked and cleaned the data by handling missing values and ensuring proper formatting.  
+In this project, we analyze the stationarity of two time series datasets: **Shampoo Sales Over Time** and **Monthly Beer Production in Australia**. The goal is to determine whether these time series exhibit stationarity and, if not, apply transformations to make them stationary for accurate forecasting.
 
-#### **2. Visualization:**  
-- Plotted **Shampoo Sales Over Time** and **Monthly Beer Production** using Matplotlib to observe trends and seasonality.  
-- Identified upward trends in both datasets, indicating potential non-stationarity.  
+#### **Key Steps:**
 
-#### **3. Stationarity Testing:**  
-- Applied the **Augmented Dickey-Fuller (ADF) Test** to assess whether the time series is stationary.  
-- Interpreted ADF statistics and **p-values** to determine stationarity.  
-- If the series was non-stationary, applied **differencing** to remove trends and re-tested using the ADF test.  
+- **Data Preprocessing:**  
+  - Downloaded the datasets using the **Kaggle API**.  
+  - Loaded the data into **Pandas DataFrames**, checked for missing values, and cleaned the data.
 
-#### **4. Key Insights:**  
-- Both datasets were initially **non-stationary**, as indicated by high p-values in the ADF test.  
-- After **first-order differencing**, both time series became stationary, meaning they could now be used for further time series modeling and forecasting.  
+- **Visualization:**  
+  - Plotted the datasets to observe trends and seasonality.
 
----
+- **Stationarity Testing:**  
+  - Applied the **Augmented Dickey-Fuller (ADF) Test** to test for stationarity.  
+  - Used **differencing** to make the data stationary if necessary.
 
-### **Outcome:**  
-This project demonstrates **stationarity analysis**, an essential step in time series forecasting. By identifying and transforming non-stationary data into a stationary format, we prepare it for **ARIMA and other predictive modeling techniques** in future mini-projects.
-## **Mini Project: Wikipedia Page View Time Series Analysis**  
+- **Key Insights:**  
+  - Both datasets were **non-stationary**, but after first-order differencing, they became stationary and ready for modeling.
 
-In this project, we analyze **Wikipedia page view traffic** using time series techniques to explore trends, seasonality, and stationarity. The goal is to understand the underlying patterns in the data and prepare it for future forecasting.  
-
-### **Key Steps:**  
-
-#### **1. Data Preprocessing:**  
-- Loaded the **Wikipedia page views dataset** into a Pandas DataFrame.  
-- Checked for **missing values** and handled them using **forward fill (ffill)** to ensure continuity.  
-- Converted the date columns into **DateTime format** and set the index for time series analysis.  
-
-#### **2. Visualization:**  
-- Plotted the **raw time series** to observe the overall trends in Wikipedia traffic.  
-- Applied **rolling statistics (mean & standard deviation)** to analyze changes over time.  
-- Used **Autocorrelation Function (ACF) plots** to understand dependencies in the time series.  
-
-#### **3. Stationarity Testing & Trend Analysis:**  
-- Conducted an **Augmented Dickey-Fuller (ADF) Test** to check stationarity.  
-- Observed **non-stationary behavior** in the data, indicating trends and seasonality.  
-- Used **seasonal decomposition** (additive model) to break the series into **trend, seasonality, and residuals** for better interpretation.  
-
-#### **4. Key Insights:**  
-- The **Wikipedia page views dataset** showed **strong seasonality and trends**, leading to non-stationarity.  
-- Rolling mean analysis indicated **long-term variations in page views**.  
-- After decomposing the series, **weekly seasonality** was observed, suggesting periodic fluctuations in traffic.  
-- These insights help in **future forecasting** by preparing the data for further modeling using ARIMA or other predictive techniques.  
+- **Outcome:**  
+  This project demonstrates **stationarity analysis** and prepares time series data for predictive modeling techniques like ARIMA.
 
 ---
 
+### **Mini Project 3: Wikipedia Page View Time Series Analysis**
+
+In this project, we analyze **Wikipedia page view traffic** to explore trends, seasonality, and stationarity using time series techniques.
+
+#### **Key Steps:**
+
+- **Data Preprocessing:**  
+  - Loaded the **Wikipedia page views dataset** into a **Pandas DataFrame**.  
+  - Handled **missing values** and converted the date columns into **DateTime format**.
+
+- **Visualization:**  
+  - Plotted the **raw time series** and performed **rolling statistics** (mean & standard deviation).  
+  - Analyzed dependencies in the data using **Autocorrelation Function (ACF)** plots.
+
+- **Stationarity Testing & Trend Analysis:**  
+  - Performed the **Augmented Dickey-Fuller (ADF) Test** for stationarity.  
+  - Observed trends and used **seasonal decomposition** to break the series into **trend**, **seasonality**, and **residuals**.
+
+- **Key Insights:**  
+  - Identified **seasonality** and **trends** in the data, indicating non-stationarity.  
+  - **Weekly seasonality** was found in the data after decomposition.
+
+- **Outcome:**  
+  This project provides insights for **future forecasting** by preparing the data for **ARIMA** or other time series forecasting models.
+
+---
+
+### **Mini Project 4: Identifying and Denoising Noise in Electric Production Time Series Data**
+
+In this project, we analyze the **Electric Production time series dataset** to identify and denoise noise, using various filtering techniques to improve data quality and preserve important trends. The goal is to manage noise components such as random fluctuations, seasonality, and outliers.
+
+#### **Key Steps:**
+
+1. **Data Loading and Preprocessing:**
+   - Loaded the **Electric Production dataset** using **Pandas**.  
+   - Checked for **missing values** and handled them using techniques such as **forward fill** or **interpolation**.  
+   - Converted the **date column** into a proper **datetime format** and set it as the index for time series analysis.  
+   - Plotted the **raw time series** to observe the general patterns, including any evident trends or seasonality.
+
+2. **Identifying Noise in Time Series:**
+   - Plotted common types of noise in time series data:
+     - **White Noise** (random fluctuations with no correlation)
+     - **Seasonal or Cyclical Noise** (periodic, repeating patterns)
+     - **Outliers and Irregular Spikes** (extreme or unexpected values)
+   - Applied **rolling statistics** (mean & standard deviation) to identify the presence of noise.
+
+3. **Applying Noise Filtering Techniques:**
+   - Implemented and compared various denoising methods:
+     - **Moving Average Filter (SMA):** Applied with different window sizes and compared the smoothed vs. original time series.
+     - **Exponential Moving Average (EMA):** Used a smoothing factor to reduce noise while maintaining trends.
+     - **Savitzky-Golay Filter:** Smoothed the time series using **scipy.signal.savgol_filter()**.
+     - **Butterworth Filters:** Used **low-pass**, **high-pass**, and **band-pass filters** to remove different types of noise.
+
+4. **Evaluating the Denoising Performance:**
+   - Compared the filters by:
+     - Plotting the **original** vs. **filtered time series**.
+     - Measuring **Mean Squared Error (MSE)** or **Signal-to-Noise Ratio (SNR)** before and after filtering.
+
+5. **Insights and Conclusion:**
+   - Different filters were effective in reducing noise:
+     - **Low-pass filters** effectively removed short-term fluctuations.
+     - **High-pass filters** preserved seasonal variations by removing long-term trends.
+   - These techniques helped enhance the time series data for further analysis and forecasting.
+
+---
+
+## **Conclusion**
+
+This repository showcases various aspects of time series analysis and forecasting, from **stationarity testing** to **noise removal**. Each mini-project demonstrates critical techniques that can be used to process and model time series data for forecasting and anomaly detection tasks.
