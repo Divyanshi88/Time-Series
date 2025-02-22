@@ -1,4 +1,3 @@
-
 # Time-Series Projects
 
 This repository contains various mini-projects related to **Time Series Analysis and Forecasting**. Each project explores different techniques and models used in time series data analysis, including preprocessing, visualization, trend analysis, and forecasting.
@@ -119,6 +118,34 @@ In this project, we analyze the **Electric Production time series dataset** to i
 
 ---
 
+### **Mini Project 5: Forecasting Electric Production Using AutoReg Model**
+
+In this project, we apply **AutoReg (Autoregressive) modeling** to forecast **Electric Production** using historical data. The focus is on handling missing values, ensuring stationarity, and tuning parameters for accurate predictions.
+
+#### **Key Steps:**
+
+- **Data Preprocessing:**
+  - Handled missing values using **forward fill, backward fill, and interpolation**.
+  - Checked for infinite values and ensured the dataset was clean.
+
+- **Stationarity & Trend Analysis:**
+  - Applied the **Augmented Dickey-Fuller (ADF) Test**.
+  - Used **differencing** to make the series stationary if required.
+
+- **Model Selection & Training:**
+  - Used **AutoReg** model with lag parameter tuning.
+  - Split the data into **train (80%)** and **test (20%)** sets.
+
+- **Evaluation & Forecasting:**
+  - Forecasted future values and compared predictions against actual data.
+  - Calculated **Mean Squared Error (MSE)** and **Root Mean Squared Error (RMSE)**.
+
+- **Outcome:**
+  - Demonstrated **time series forecasting** using AutoReg.
+  - Provided insights into **model accuracy** and performance evaluation.
+
+---
+
 ## **Conclusion**
 
-This repository showcases various aspects of time series analysis and forecasting, from **stationarity testing** to **noise removal**. Each mini-project demonstrates critical techniques that can be used to process and model time series data for forecasting and anomaly detection tasks.
+This repository showcases various aspects of time series analysis and forecasting, from **stationarity testing** to **noise removal and forecasting**.
