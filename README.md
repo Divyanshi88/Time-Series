@@ -81,71 +81,72 @@ In this project, we analyze **Wikipedia page view traffic** to explore trends, s
 
 ### **Mini Project 4: Identifying and Denoising Noise in Electric Production Time Series Data**
 
-In this project, we analyze the **Electric Production time series dataset** to identify and denoise noise, using various filtering techniques to improve data quality and preserve important trends. The goal is to manage noise components such as random fluctuations, seasonality, and outliers.
+In this project, we analyze the **Electric Production time series dataset** to identify and denoise noise, using various filtering techniques to improve data quality and preserve important trends.
 
 #### **Key Steps:**
 
-1. **Data Loading and Preprocessing:**
-   - Loaded the **Electric Production dataset** using **Pandas**.  
-   - Checked for **missing values** and handled them using techniques such as **forward fill** or **interpolation**.  
-   - Converted the **date column** into a proper **datetime format** and set it as the index for time series analysis.  
-   - Plotted the **raw time series** to observe the general patterns, including any evident trends or seasonality.
+- **Data Preprocessing:**  
+  - Loaded the **Electric Production dataset** using **Pandas**.  
+  - Checked for **missing values** and handled them using techniques such as **forward fill** or **interpolation**.  
+  - Converted the **date column** into a proper **datetime format** and set it as the index.
 
-2. **Identifying Noise in Time Series:**
-   - Plotted common types of noise in time series data:
-     - **White Noise** (random fluctuations with no correlation)
-     - **Seasonal or Cyclical Noise** (periodic, repeating patterns)
-     - **Outliers and Irregular Spikes** (extreme or unexpected values)
-   - Applied **rolling statistics** (mean & standard deviation) to identify the presence of noise.
+- **Noise Identification & Filtering:**  
+  - Plotted noise patterns such as **white noise, seasonal noise, and outliers**.  
+  - Applied **Moving Average Filter, Exponential Moving Average, Savitzky-Golay Filter, and Butterworth Filters**.
 
-3. **Applying Noise Filtering Techniques:**
-   - Implemented and compared various denoising methods:
-     - **Moving Average Filter (SMA):** Applied with different window sizes and compared the smoothed vs. original time series.
-     - **Exponential Moving Average (EMA):** Used a smoothing factor to reduce noise while maintaining trends.
-     - **Savitzky-Golay Filter:** Smoothed the time series using **scipy.signal.savgol_filter()**.
-     - **Butterworth Filters:** Used **low-pass**, **high-pass**, and **band-pass filters** to remove different types of noise.
-
-4. **Evaluating the Denoising Performance:**
-   - Compared the filters by:
-     - Plotting the **original** vs. **filtered time series**.
-     - Measuring **Mean Squared Error (MSE)** or **Signal-to-Noise Ratio (SNR)** before and after filtering.
-
-5. **Insights and Conclusion:**
-   - Different filters were effective in reducing noise:
-     - **Low-pass filters** effectively removed short-term fluctuations.
-     - **High-pass filters** preserved seasonal variations by removing long-term trends.
-   - These techniques helped enhance the time series data for further analysis and forecasting.
+- **Key Insights & Outcome:**  
+  - Demonstrated noise reduction techniques to improve forecasting accuracy.
 
 ---
 
 ### **Mini Project 5: Forecasting Electric Production Using AutoReg Model**
 
-In this project, we apply **AutoReg (Autoregressive) modeling** to forecast **Electric Production** using historical data. The focus is on handling missing values, ensuring stationarity, and tuning parameters for accurate predictions.
+In this project, we apply **AutoReg (Autoregressive) modeling** to forecast **Electric Production** using historical data.
 
 #### **Key Steps:**
 
-- **Data Preprocessing:**
-  - Handled missing values using **forward fill, backward fill, and interpolation**.
-  - Checked for infinite values and ensured the dataset was clean.
+- **Data Preprocessing & Stationarity Testing:**  
+  - Handled missing values and applied **ADF Test** for stationarity.  
+  - Used **differencing** if required.
 
-- **Stationarity & Trend Analysis:**
-  - Applied the **Augmented Dickey-Fuller (ADF) Test**.
-  - Used **differencing** to make the series stationary if required.
+- **Model Training & Evaluation:**  
+  - Used **AutoReg** with lag parameter tuning.  
+  - Forecasted future values and evaluated performance using **MSE & RMSE**.
 
-- **Model Selection & Training:**
-  - Used **AutoReg** model with lag parameter tuning.
-  - Split the data into **train (80%)** and **test (20%)** sets.
+- **Outcome:**  
+  - Demonstrated **time series forecasting** using AutoReg and performance evaluation.
 
-- **Evaluation & Forecasting:**
-  - Forecasted future values and compared predictions against actual data.
-  - Calculated **Mean Squared Error (MSE)** and **Root Mean Squared Error (RMSE)**.
+---
 
-- **Outcome:**
-  - Demonstrated **time series forecasting** using AutoReg.
-  - Provided insights into **model accuracy** and performance evaluation.
+### **Mini Project 6: ARIMA-based Time Series Forecasting**
+
+In this project, we use the **ARIMA (AutoRegressive Integrated Moving Average) model** to forecast time series data. ARIMA is one of the most powerful statistical models for time series forecasting.
+
+#### **Key Steps:**
+
+- **Data Preprocessing & Stationarity Testing:**  
+  - Loaded the dataset and checked for missing values.  
+  - Applied **Augmented Dickey-Fuller (ADF) Test** to check stationarity.  
+  - Used **differencing** to make the series stationary if necessary.
+
+- **Model Selection & Training:**  
+  - Identified optimal **p, d, q** parameters using **ACF/PACF plots**.  
+  - Trained the **ARIMA model** on the dataset.
+
+- **Forecasting & Evaluation:**  
+  - Forecasted future values using the trained ARIMA model.  
+  - Compared predictions with actual values using **RMSE, MSE, and AIC/BIC scores**.
+
+- **Outcome:**  
+  - Demonstrated how to use ARIMA for effective time series forecasting and parameter tuning.
 
 ---
 
 ## **Conclusion**
 
-This repository showcases various aspects of time series analysis and forecasting, from **stationarity testing** to **noise removal and forecasting**.
+This repository showcases various aspects of time series analysis and forecasting, from **stationarity testing** to **noise removal and forecasting** using different models such as **AutoReg and ARIMA**. Each project provides a structured approach to analyzing and predicting time series data.
+
+---
+
+Feel free to explore, contribute, or raise issues if you have any suggestions! 🚀
+
